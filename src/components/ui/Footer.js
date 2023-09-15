@@ -20,10 +20,10 @@ function Footer() {
               <a href="https://github.com/nicolkill" target="_blank" rel="noreferrer noopener">Github</a>
             </li>
             <li>
-              <a href="https://github.com/nicolkill" target="_blank" rel="noreferrer noopener">Linkedin</a>
+              <a href="https://www.linkedin.com/in/nicolkill" target="_blank" rel="noreferrer noopener">Linkedin</a>
             </li>
             <li>
-              <a href="https://github.com/nicolkill" target="_blank" rel="noreferrer noopener">Twitter</a>
+              <a href="https://twitter.com/nicolkill" target="_blank" rel="noreferrer noopener">Twitter</a>
             </li>
           </ul>
         </div>

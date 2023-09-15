@@ -29,6 +29,14 @@ const MENU = [
     text: "Github",
     url: "https://github.com/nicolkill",
   },
+  {
+    text: "Linkedin",
+    url: "https://www.linkedin.com/in/nicolkill",
+  },
+  {
+    text: "Twitter/X",
+    url: "https://twitter.com/nicolkill",
+  },
 ];
 // const AUTH_MENU = [
 //   {
