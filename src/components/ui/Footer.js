@@ -17,13 +17,13 @@ function Footer() {
           <span className="font-bold">Social</span>
           <ul className="list-disc mt-2">
             <li>
-              <a href="https://github.com/nicolkill" target="_blank">Github</a>
+              <a href="https://github.com/nicolkill" target="_blank" rel="noreferrer noopener">Github</a>
             </li>
             <li>
-              <a href="https://github.com/nicolkill" target="_blank">Linkedin</a>
+              <a href="https://github.com/nicolkill" target="_blank" rel="noreferrer noopener">Linkedin</a>
             </li>
             <li>
-              <a href="https://github.com/nicolkill" target="_blank">Twitter</a>
+              <a href="https://github.com/nicolkill" target="_blank" rel="noreferrer noopener">Twitter</a>
             </li>
           </ul>
         </div>

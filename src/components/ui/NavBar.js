@@ -69,7 +69,8 @@ function displayElement(ownClasses, theme, item, index) {
       <a
         {...classValues}
         href={item.url}
-        target="_blank">
+        target="_blank"
+        rel="noreferrer noopener">
         {item.text}
       </a>
     );
