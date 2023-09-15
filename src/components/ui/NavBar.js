@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {PropTypes} from "prop-types";
 import { Link, NavLink } from "react-router-dom";
+import TextTerminal from "../TextTerminal";
 
 const THEMES = {
   dark: {
@@ -61,6 +62,16 @@ function displayElement(ownClasses, theme, item, index) {
         className={({isActive}) => isActive ? classValues.className + ` ${THEMES[theme].hoverBackground} ${THEMES[theme].hoverText}` : classValues.className}>
         {item.text}
       </NavLink>
+    );
+  }
+  if (item.url) {
+    return (
+      <a
+        {...classValues}
+        href={item.url}
+        target="_blank">
+        {item.text}
+      </a>
     );
   }
   return (
@@ -124,16 +135,18 @@ function NavBar({options, theme}) {
   };
 
   return (
-    <nav className={`${THEMES[theme].background} border-b`}>
+    <nav className={`${THEMES[theme].background} border-b fixed w-full`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link to="/">
                 <div className="">
-                  <img className="h-8 w-8" src="/images/logo_small.png"
-                       alt="Logo"/>
-                  <p className="text-2xs font-bold">uListApp</p>
+                  {/*<img className="h-8 w-8" src="/images/logo_small.png"*/}
+                  {/*     alt="Logo"/>*/}
+                  <p className="text-xs font-bold">
+                    nicolkill<TextTerminal extraClasses="font-bold text-primary-100" options={[""]}/>
+                  </p>
                 </div>
               </Link>
             </div>
@@ -200,6 +213,7 @@ NavBar.propTypes = {
     PropTypes.shape({
       mobile: PropTypes.bool,
       desktop: PropTypes.bool,
+      url: PropTypes.string,
       func: PropTypes.func,
       path: PropTypes.string,
       text: PropTypes.string,

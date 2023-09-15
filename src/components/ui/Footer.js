@@ -11,11 +11,19 @@ function Footer() {
             <li>
               <Link to="/">Main page</Link>
             </li>
+          </ul>
+        </div>
+        <div className="flex-1">
+          <span className="font-bold">Social</span>
+          <ul className="list-disc mt-2">
             <li>
-              <Link to="/products">Products Checker</Link>
+              <a href="https://github.com/nicolkill" target="_blank">Github</a>
             </li>
             <li>
-              <Link to="/search">Search changes Checker</Link>
+              <a href="https://github.com/nicolkill" target="_blank">Linkedin</a>
+            </li>
+            <li>
+              <a href="https://github.com/nicolkill" target="_blank">Twitter</a>
             </li>
           </ul>
         </div>
