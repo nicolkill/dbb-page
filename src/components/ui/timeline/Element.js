@@ -1,7 +1,7 @@
 import React from "react";
 import {PropTypes} from "prop-types";
 
-function Element({ orientation, iconName, title, subtitle, description }) {
+function Element({ orientation, iconName, title, subtitle, description, tags }) {
   const isRight = orientation === "right"
 
   return (
@@ -10,13 +10,18 @@ function Element({ orientation, iconName, title, subtitle, description }) {
         <div className={"flex w-full mx-auto items-center " + (isRight ? "justify-start" : "justify-end")}>
           <div className={"w-full sm:w-1/2 " + (isRight ? "sm:pr-8" : "sm:pl-8")}>
             <div className="p-4 bg-white rounded shadow">
-              <p className="text-md">{title}</p>
+              <p className="text-md text-black font-bold">{title}</p>
               <p className="text-xs">{subtitle}</p>
               <div className="pt-4 text-xs">
                 {description}
               </div>
-              <div>
-
+              <div className="text-xs pt-4">
+                {tags.map((t) => (
+                  <span key={"timeline_element_tag_" + t}
+                    className="bg-secondary-200 text-white px-1 mr-px mb-px rounded inline-flex">
+                    {t}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

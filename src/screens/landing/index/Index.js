@@ -1,5 +1,6 @@
 import React from "react";
 
+import PROFILE from "../../../profile";
 import Timeline from "../../../components/ui/timeline/Timeline";
 import TextTerminal from "../../../components/TextTerminal";
 import Section from "../../../components/ui/landing/Section";
@@ -7,15 +8,19 @@ import Title from "../../../components/ui/landing/section/Title";
 import Content from "../../../components/ui/landing/section/Content";
 import FullPageSection from "../../../components/ui/landing/FullPageSection";
 
+import Horizontal from "../../../components/ui/components/horizontal/Horizontal";
+import SectionHorizontal from "../../../components/ui/components/horizontal/Section";
+import Card from "../../../components/Card";
+
 function Index() {
   return (
     <div>
       {/* full page */}
       <FullPageSection>
         <Title>
-          Nicol Acosta
+          {PROFILE.full_name}
           <p className="text-primary-100">
-            Software Engineer
+            {PROFILE.work_title}
           </p>
         </Title>
         <div className="text-4xl pt-8">
@@ -23,57 +28,47 @@ function Index() {
           <br/>
           <TextTerminal
             extraClasses="font-bold text-primary-100"
-            options={["Elixir", "Phoenix", "Ash", "Javascript/Typescript", "NextJS", "NestJS"]}/>
+            options={PROFILE.expertise}/>
         </div>
       </FullPageSection>
       {/* short description */}
       <Section theme="dark">
         <Title>Who am i?</Title>
         <Content>
-          Im a Software Engineer with 9+ years of experience, 7+ using <b>Elixir (Phoenix, Ash)</b> and 7+ using
-          <b>Javascript (Node, React in Vanilla or Typescript)</b> and more languages like Ruby and Python, i know how
-          to take a product and move from nothing to production across software development, devops and deployment to
-          AWS or another cloud service ensuring good practices in code and management, ensuring product reliability and grow.
+          {PROFILE.who_im_i}
         </Content>
       </Section>
       {/* pricing */}
       <Section>
         <Title>Experience</Title>
-        <Timeline data={
-          [
-            {
-              iconName: "work",
-              title: "CodePower - Software Engineer Sr",
-              subtitle: "jul. 2021 - Current",
-              description: <div>
-                Worked on a project that requires high availability of the service, API on GraphQL, while keeping coherence and transactions coordination in the database with programmed tasks and more complex flows about data coherence between the database and multiple users.
-                <br/><br/>
-                Manage real-time communication between backend and frontend, and deployed multiple frontend instances communicated by the backend.
-                <br/><br/>
-                Developed hybrid apps combining backend and frontend in the same project and codebase, integrating external services like Paypal
-                <br/><br/>
-                Integrated Localstack for local development and replace the past tool using Docker, Migrated near to 4m of rows from a MongoDB database to PostgreSQL
-                <br/><br/>
-                Expose features as external API to external clients usage
-              </div>,
-              tags: ["full-time", "remote", "elixir", "phoenix", "ash", "postgresql", "mongodb", "aws", "typescript", "reactjs", "docker"],
-            },
-            {
-              iconName: "work",
-              title: "LandOnEarth - Full Stack Engineer Sr",
-              subtitle: "jul. 2020 - jul. 2021",
-              description: <div>
-                Company based on San Antonio Texas in the world of real estate, using daily interests and lifestyle to generate options to rent/buy house/apartment
-                <br/><br/>
-                - Create from scratch with the team the main application<br/>
-                - Improve and create new features for the product<br/>
-                - Work a lot in the front using live_view<br/>
-                - Implemented all the auth features using Cognito as a auth provider and DynamoDB as session storage
-              </div>,
-              tags: ["full-time", "remote", "elixir", "phoenix", "live_view", "postgresql", "aws", "docker"],
-            },
-          ]
-        }/>
+        <Timeline data={PROFILE.experience}/>
+      </Section>
+      {/* projects */}
+      <Section theme="dark">
+        <Title>OpenSource Projects</Title>
+        <Horizontal>
+          {PROFILE.projects.map((e, i) => (
+            <SectionHorizontal key={"projects_element_" + i}>
+              <Card className="transition hover:border-gray-500 hover:shadow:2xl">
+                <span className="text-lg font-bold">
+                  {e.name}
+                </span>
+                <p className="my-4 text-sm">
+                  {e.description}
+                </p>
+                <div className="text-xs pt-4">
+                  {e.tags.map((t) => (
+                    <span key={"timeline_element_tag_" + t}
+                          className="bg-secondary-200 text-white px-1 mr-px mb-px rounded inline-flex">
+                    {t}
+                  </span>
+                  ))}
+                </div>
+                <a href={e.url} target="_blank" rel="noreferrer noopener">Go to Page</a>
+              </Card>
+            </SectionHorizontal>
+          ))}
+        </Horizontal>
       </Section>
     </div>
   );
