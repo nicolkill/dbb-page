@@ -1,8 +1,17 @@
 const EXPERIENCE = [
   {
     iconName: "work",
+    title: "AR Workflow - Backend Developer Sr",
+    subtitle: "sep. 2023 - current",
+    description: <div>
+      Build again the current platform to a newer version using modern methodologies, good practices and tons of testing
+    </div>,
+    tags: ["full-time", "remote", "ruby", "ruby-on-rails", "redis", "postgresql", "quickbooks-online"],
+  },
+  {
+    iconName: "work",
     title: "CodePower - Software Engineer Sr",
-    subtitle: "jul. 2021 - Current",
+    subtitle: "jul. 2021 - sep. 2023",
     description: <div>
       Worked on a project that requires high availability of the service, API on GraphQL, while keeping coherence and
       transactions coordination in the database with programmed tasks and more complex flows about data coherence
@@ -150,6 +159,12 @@ const PROJECTS = [
     url: "https://github.com/nicolkill/map_schema_validator",
     description: "JSON Schema verifier in Elixir",
     tags: ["elixir"],
+  },
+  {
+    name: "fl_ex",
+    url: "https://github.com/nicolkill/fl_ex",
+    description: "Elixir http micro framework inspired in Flask",
+    tags: ["elixir", "api"],
   },
 ]
 
