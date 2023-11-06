@@ -1,8 +1,17 @@
 const EXPERIENCE = [
   {
     iconName: "work",
+    title: "PepsiCo eCommerce - Elixir Developer Sr",
+    subtitle: "nov. 2023 - current",
+    description: <div>
+      
+    </div>,
+    tags: ["full-time", "remote", "elixir", "phoenix", "postgresql", "aws", "docker"],
+  },
+  {
+    iconName: "work",
     title: "AR Workflow - Backend Developer Sr",
-    subtitle: "sep. 2023 - current",
+    subtitle: "sep. 2023 - nov. 2023",
     description: <div>
       Build again the current platform to a newer version using modern methodologies, good practices and tons of testing
     </div>,
