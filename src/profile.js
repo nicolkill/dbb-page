@@ -4,18 +4,10 @@ const EXPERIENCE = [
     title: "PepsiCo eCommerce - Elixir Developer Sr",
     subtitle: "nov. 2023 - current",
     description: <div>
-      
+      Working on internal software only related to business intelligence and reports about PepsiCo Products and all the 
+      inner brands
     </div>,
-    tags: ["full-time", "remote", "elixir", "phoenix", "postgresql", "aws", "docker"],
-  },
-  {
-    iconName: "work",
-    title: "AR Workflow - Backend Developer Sr",
-    subtitle: "sep. 2023 - nov. 2023",
-    description: <div>
-      Build again the current platform to a newer version using modern methodologies, good practices and tons of testing
-    </div>,
-    tags: ["full-time", "remote", "ruby", "ruby-on-rails", "redis", "postgresql", "quickbooks-online"],
+    tags: ["full-time", "remote", "elixir", "phoenix", "postgresql", "aws", "docker", "snowflake", "oban"],
   },
   {
     iconName: "work",
