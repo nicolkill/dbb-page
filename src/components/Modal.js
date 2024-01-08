@@ -31,7 +31,7 @@ function Modal({size, display, closeCallback, options, children}) {
                   <Button
                     callback={o.callback}
                     type={(o.type ? o.type : "primary")}
-                    extraClasses="mr-1">
+                    className="mr-1">
                     {o.text}
                   </Button>
                 </div>

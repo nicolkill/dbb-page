@@ -26,6 +26,10 @@ const MENU = [
   //   path: "/products",
   // },
   {
+    text: "Blog",
+    path: "/blog",
+  },
+  {
     text: "Github",
     url: "https://github.com/nicolkill",
   },

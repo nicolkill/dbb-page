@@ -1,6 +1,6 @@
 import React from "react";
 
-import PROFILE from "../../../profile";
+import PROFILE from "./profile";
 import Timeline from "../../../components/ui/timeline/Timeline";
 import TextTerminal from "../../../components/TextTerminal";
 import Section from "../../../components/ui/landing/Section";

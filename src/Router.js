@@ -5,11 +5,13 @@ import {
 } from "react-router-dom";
 import React, { useContext, useEffect } from 'react';
 
-import uListApi from "./services/uListApi";
-import { StateProvider, StateContext } from "./state/global_state/StateProvider";
+// import uListApi from "./services/uListApi";
+import { StateProvider } from "./state/global_state/StateProvider";
 import { ClockProvider, ClockContext } from "./state/single_thread_clock/ClockProvider";
 
 import Index from "./screens/landing/index/Index";
+import Blog from "./screens/landing/blog/Blog";
+import Post from "./screens/landing/blog/Post";
 // import Login from "./screens/landing/sessions/login/Login";
 // import Register from "./screens/landing/sessions/register/Register";
 // import Logout from "./screens/landing/sessions/logout/Logout";
@@ -33,17 +35,14 @@ function Router() {
               <Routes>
                 <Route path="/" element={<Landing />} >
                   <Route index element={<Index />} />
-                  {/*<Route path="products" element={<ProductCrawl />} />*/}
+                  <Route path="blog" element={<Blog />} />
                   {/*<Route path="login" element={<AuthRoute element={Login} not />} />*/}
                   {/*<Route path="register" element={<AuthRoute element={Register} not />} />*/}
                 </Route>
 
-                {/*<Route path="/dashboard" element={<AuthRoute element={Dashboard} />} >*/}
-                {/*  <Route index element={<Products />} />*/}
-                {/*  <Route path="products" element={<Products />} />*/}
-                {/*  <Route path="search" element={<Search />} />*/}
-                {/*  <Route path="profile" element={<Profile />} />*/}
-                {/*</Route>*/}
+                <Route path="/blog" element={<Landing />} >
+                  <Route path=":slug" element={<Post />} />
+                </Route>
 
                 {/*<Route path="sign_out" element={<AuthRoute element={Logout} />} />*/}
                 {/*<Route path="redirect" element={<Redirect />} />*/}
@@ -70,19 +69,19 @@ function Router() {
 // }
 
 function StateInitializer({ children }) {
-  const [state, dispatch] = useContext(StateContext);
+  // const [state, dispatch] = useContext(StateContext);
 
-  const checkRemoteData = async () => {
-    let response = await uListApi.profile();
-    const profile = response.status === 200 ? response.body.data : null;
-    dispatch({ type: "update_profile", newValue: profile });
-  };
+  // const checkRemoteData = async () => {
+  //   let response = await uListApi.profile();
+  //   const profile = response.status === 200 ? response.body.data : null;
+  //   dispatch({ type: "update_profile", newValue: profile });
+  // };
 
-  useEffect(() => {
-    if (!state.firstLoad) {
-      checkRemoteData();
-    }
-  });
+  // useEffect(() => {
+  //   if (!state.firstLoad) {
+  //     checkRemoteData();
+  //   }
+  // });
 
   return (
     <div>

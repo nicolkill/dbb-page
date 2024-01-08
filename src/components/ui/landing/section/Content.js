@@ -3,7 +3,7 @@ import {PropTypes} from "prop-types";
 
 function Content({className, children, ...props}) {
   return (
-    <p {...props} className={"text-xl mt-10" + className}>
+    <p {...props} className={"text-xl my-10" + className}>
       {children}
     </p>
   );

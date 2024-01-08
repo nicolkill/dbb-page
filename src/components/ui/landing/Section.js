@@ -8,7 +8,7 @@ const THEMES = {
 
 function Section({children, className, theme, ...props}) {
   return (
-    <div {...props} className={"p-8 xl:px-0 " + THEMES[theme]}>
+    <div {...props} className={"p-8 xl:px-0 " + className + " " + THEMES[theme]}>
       <div className="max-w-7xl mx-auto">
         {children}
       </div>

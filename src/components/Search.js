@@ -28,7 +28,7 @@ function Search({submitText, loading, placeholder, defaultValue, submitCallback,
           extraClasses="rounded-l-md"
           changeCallback={handleInputChange} />
       </div>
-      <Button extraClasses="shadow rounded-none rounded-r-md py-0" callback={handleSubmitForm}>
+      <Button className="shadow rounded-none rounded-r-md py-0" callback={handleSubmitForm}>
         {loading &&
         <span className="material-icons animate-spin">autorenew</span>
         }

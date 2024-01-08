@@ -53,7 +53,7 @@ function ChangeProductPlan({closeCallback, product: propProduct}) {
         {Object.keys(PLANS).map((plan, index) => (
           <div className="px-1">
             <Button
-              extraClasses="flex-1"
+              className="flex-1"
               type={product.check_strategy === plan ? "link" : "secondary"}
               callback={handlePlanChange.bind(this, plan)} >
               {PLANS[plan]}

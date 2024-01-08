@@ -17,7 +17,7 @@ function Form({submit, loading, submitCallback, children}) {
       </div>
       {submit &&
       <div>
-        <Button extraClasses="shadow w-full" buttonType="submit">
+        <Button className="shadow w-full" buttonType="submit">
           <span className="material-icons opacity-20">lock</span>
           <span className="flex-grow pl-2">
           Sign in

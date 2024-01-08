@@ -1,5 +1,6 @@
 import React from "react";
 import {PropTypes} from "prop-types";
+import {Link} from "react-router-dom";
 
 const TYPES = {
   primary: "text-white bg-primary-100 hover:bg-primary-200 transition-all",
@@ -17,7 +18,7 @@ const SIZES = {
   small: "text-xs",
 }
 
-function Button({type, buttonType, size, extraClasses, callback, link, children}) {
+function Button({type, buttonType, size, className, callback, link, children}) {
   const params = {};
   if (type !== "disabled") {
     if (buttonType === "button") {
@@ -29,10 +30,20 @@ function Button({type, buttonType, size, extraClasses, callback, link, children}
       };
     }
   }
+  if (buttonType === "path") {
+    return (
+      <Link
+        to={link}
+        className={TYPES[type] + " " + SIZES[size] + " font-medium items-center justify-center px-4 py-2 border border-transparent rounded-md " + className}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
     <button
       type={buttonType}
-      className={TYPES[type] + " " + SIZES[size] + " font-medium flex items-center justify-center px-4 py-2 border border-transparent rounded-md " + extraClasses}
+      className={TYPES[type] + " " + SIZES[size] + " font-medium flex items-center justify-center px-4 py-2 border border-transparent rounded-md " + className}
       {...params}>
       {children}
     </button>
@@ -41,9 +52,9 @@ function Button({type, buttonType, size, extraClasses, callback, link, children}
 
 Button.propTypes = {
   callback: PropTypes.func,
-  extraClasses: PropTypes.string,
+  className: PropTypes.string,
   link: PropTypes.string,
-  buttonType: PropTypes.oneOf(["button", "submit", "link"]),
+  buttonType: PropTypes.oneOf(["button", "submit", "link", "path"]),
   type: PropTypes.oneOf(Object.keys(TYPES)),
   size: PropTypes.oneOf(Object.keys(SIZES)),
 };
@@ -53,7 +64,7 @@ Button.defaultProps = {
   type: "primary",
   size: "normal",
   link: "",
-  extraClasses: ""
+  className: ""
 };
 
 export default Button;
