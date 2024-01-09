@@ -90,8 +90,6 @@ const MENU = [
 // ];
 
 function Landing() {
-  firebase.registerScreen("landing");
-
   // const [ state, ] = useContext(StateContext)
   // const menu = MENU.concat(state.session ? AUTH_MENU : UNAUTH_MENU);
 

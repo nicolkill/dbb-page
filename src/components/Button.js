@@ -3,13 +3,13 @@ import {PropTypes} from "prop-types";
 import {Link} from "react-router-dom";
 
 const TYPES = {
-  primary: "text-white bg-primary-100 hover:bg-primary-200 transition-all",
-  secondary: "text-white bg-secondary-100 hover:bg-secondary-200 transition-all",
-  accent: "text-white bg-accent-100 hover:bg-accent-200 transition-all",
-  error: "text-white bg-red-700 hover:bg-red-600 transition-all",
-  danger: "text-white bg-orange-400 hover:bg-orange-300 transition-all",
-  link: "text-primary-100 hover:underline ",
-  disabled: "text-gray-600 bg-gray-200 cursor-not-allowed",
+  primary: "!text-white bg-primary-100 hover:bg-primary-200 transition-all",
+  secondary: "!text-white bg-secondary-100 hover:bg-secondary-200 transition-all",
+  accent: "!text-white bg-accent-100 hover:bg-accent-200 transition-all",
+  error: "!text-white bg-red-700 hover:bg-red-600 transition-all",
+  danger: "!text-white bg-orange-400 hover:bg-orange-300 transition-all",
+  link: "!text-primary-100 hover:underline ",
+  disabled: "!text-gray-600 bg-gray-200 cursor-not-allowed",
 }
 
 const SIZES = {

@@ -68,10 +68,23 @@
 .blog-post pre {
   background-color: #00000022;
   padding: 0.5rem;
+  border-top: 0.5rem solid #6b70a0;
+  border-bottom: 0.5rem solid #6b70a0;
   border-radius: 5px;
 }
+.blog-post blockquote {
+  border-left: 5px solid #6b70a0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: #00000022;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.blog-post blockquote p {
+  padding: unset;
+}
 .blog-post a {
-  color: rgb(81 85 126);
+  color: #7d81ac;
 }
 .blog-post h1 {
   font-size: 3rem;

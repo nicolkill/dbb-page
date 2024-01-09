@@ -6,9 +6,12 @@ import POSTS from "./posts";
 import Section from "../../../components/ui/landing/Section";
 import Content from "../../../components/ui/landing/section/Content";
 import Button from "../../../components/Button";
+import firebase from "../../../services/firebase";
 
 function Post() {
   const {slug} = useParams();
+
+  firebase.registerScreen(`blog/${slug}`);
 
   const p = POSTS.find((p) => p.slug === slug);
 
